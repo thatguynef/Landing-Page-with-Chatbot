@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- 1. Enter your Universal Analytics ID UA-XXXXXXX-X -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-XXXXXXX-X');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 2. Change your Google Font here -->
+    <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap" rel="stylesheet">
+    <!-- 3. Add your favicon image -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" >
+    <title>Sample Landing Page</title>
+    <!-- 4. Inline CSS to make the page load faster -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Fanwood Text", serif;
+            margin: 0;
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header {
+            display: grid;
+            grid-template-areas: "hero";
+            align-items: center;
+            height: 100vh;
+            background-color: #f9fbfd;
+        }
+
+        header>* {
+            grid-area: hero;
+        }
+
+        #hero-img {
+            object-fit: cover;
+            height: 100vh;
+            width: 100%;
+            justify-self: end;
+            transition: 180ms width ease-in;
+        }
+
+        #logo {
+            width: 150px;
+            position: absolute;
+            top: 16px;
+            left: 5%;
+            z-index: 10;
+        }
+
+        @media (min-width: 1100px) {
+            header .hero__content {
+                margin-left: 3rem;
+                max-width: 45%;
+                min-width: 30ch;
+                z-index: 1;
+                background-color: rgba(249, 251, 253, 0.8);
+                padding: 2rem;
+            }
+
+            #hero-img {
+                height: 100vh;
+                width: 100%;
+                justify-self: end;
+                transition: 180ms width ease-in;
+            }
+        }
+
+        header .hero__content {
+            width: 85%;
+            z-index: 1;
+            background-color: rgba(249, 251, 253, 0.8);
+            padding: 2rem;
+            margin: 1rem auto;
+        }
+
+        header .hero__content h1 {
+            font-size: 3rem;
+            color: #533E27;
+            font-weight: 500;
+            margin: 0 0 1rem;
+            line-height: 1.1;
+        }
+
+        header .hero__content p {
+            font-size: 1.75rem;
+            color: #2c2c2c;
+        }
+
+        .button {
+            font-size: 1.125rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: start;
+            background-color: #628800;
+            color: #fff;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+            padding: 0.25em 0.75em;
+            min-width: 10ch;
+            min-height: 44px;
+            text-align: center;
+            line-height: 1.1;
+            transition: 220ms all ease-in-out;
+            border-radius: 5px;
+        }
+
+        .button:hover,
+        .button:active {
+            background-color: #9EC03E;
+            transform: translateX(5%);
+            transition: transform .2s ease;
+        }
+
+        .button:focus {
+            outline-style: solid;
+            outline-color: transparent;
+            box-shadow: 0 0 0 4px #533E27;
+        }
+
+        /* .button::after {
+            content: '\2192';
+        } */
+        .icon {
+            width: 16px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo.png"
+            class="logo" alt="">
+        <div class="hero__content">
+            <h1 id="title">Hello World, </h1>
+            <p id="subtitle">How was your stay at Hotel California?</p>
+            <!-- 5. Commenting out where I invoke Quriobot (a cool chatbot I use in the demo) I recommend Typebot, too-->
+            <!-- <a href="#" id="button_bg_color" class="button" onclick="quriobot.start()">Start Survey
+                <span class="icon">
+                    <svg viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
+                            fill-rule="nonzero" fill="#fff" class="fill-main"></path>
+                    </svg>
+                </span>
+            </a> -->
+        </div>
+        <img id="hero-img" src="img/default-bg.jpg" alt="">
+    </header>
+    <!-- Start Quriobot -->
+    <!-- 6. Quriobot script would go here -->
+    <!-- End Quriobot -->
+
+    <!-- Start URL Get Params -->
+    <script>
+        window.onload = (event) => {
+            // grab the url param name(s)
+            var params = new URLSearchParams(document.location.search.substring(1));
+            var firstName = params.get('firstName');
+            var cabin = params.get('cabin');
+            var email = params.get('email');
+
+            if (firstName) {
+                document.getElementById("title").innerHTML = "Hi " + firstName + ",";
+            }
+            // if "cabin" url param is present, find relevant image
+            if (cabin) {
+                var cabin_key = cabin.replace(/\s+/g, '-').toLowerCase();
+                for (var i = 0; i < cabins.length; i++) {
+                    if (cabin_key == cabins[i].key) {
+                        document.getElementById("hero-img").src = "img/" + cabins[i].key + ".jpg"; 
+                        subtitle.innerHTML = "Can you take a moment to tell us about your stay at " + cabin + "?"; 
+                    } 
+                }
+            }
+        };
+        // Cabin list as an object
+        var cabins = [{
+                property: "Cabin 1",
+                key: "cabin-1"
+            },
+            {
+                property: "Cabin 2",
+                key: "cabin-2"
+            },
+            {
+                property: "Cabin 3",
+                key: "cabin-3"
+            }
+        ];
+    </script>
+    <!-- End URL Get Params -->
+</body>
+
+</html>
